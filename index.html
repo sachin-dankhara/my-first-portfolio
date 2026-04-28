@@ -1,19 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apna Bazar</title>
-</head>
-<body>
-  <section class = "Product container">
-    <div class ="Product-card">
-      <img src="">
-      <div class="Product-info">
-        <h3 class="Product-title"> My phone-17</h3>
-        <p class="Product-detail">Best phone in the market with latest specification</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apna Bazar</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1>Apna Bazar</h1>
+      <div class="cart-icon" id="cart-container">
+        <span id="cart-items"> Items: 0</span>
+        <br />
+        <span id="cart-total">Total= $0</span>
+      </div>
+    </nav>
+
+    <main>
+      <section id="product-list" class="Product-container"></section>
+    </main>
+    <div id="product-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <div id="modal-body"></div>
       </div>
     </div>
-  </section>
-</body>
+
+    <div class="cart-popup-overlay" id="cartPopupOverlay">
+      <div class="cart-popup">
+        <div class="cart-popup-header">
+          <h2>Your Cart</h2>
+          <span class="cart-popup-close">&times;</span>
+        </div>
+
+        <div class="cart-popup-items" id="cartPopupItems">
+          <!-- dynamic items here -->
+        </div>
+
+        <div class="cart-popup-footer">
+          <div class="cart-popup-total">
+            <span>Total:</span>
+            <span>$<span id="cartPopupTotal">0</span></span>
+          </div>
+          <button class="cart-popup-checkout">Checkout</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/app.js"></script>
+  </body>
 </html>
